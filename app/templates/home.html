@@ -1,12 +1,10 @@
-
-<section>
-	<h1>{{ home.mainTitle }}</h1>
-</section>
+<body class='home'>
+		<section>
+		<h1>{{ home.mainTitle }}</h1>
+	</section>
  
-<section>
-	<table>
-		<tr>
-			<td>{{ room.Room }}</td>
-		</tr>
-	</table>
-</section>
+	<section class='room'>
+		<h4 ng-repeat= 'room in home.rooms'>{{room.$value}}</h4>
+	</section>
+</body>
+
