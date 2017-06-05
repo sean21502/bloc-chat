@@ -1,6 +1,5 @@
 (function() {
 	function RoomCtrl(Room) {
-	
 		this.Room = Room;
 	}
 

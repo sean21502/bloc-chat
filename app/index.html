@@ -3,13 +3,14 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.css">
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
 	<ui-view></ui-view>
 	
 	<!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	
 	<!-- AngularUI Router -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
@@ -33,8 +34,8 @@
   		};
   		firebase.initializeApp(config);
 	</script>
-	 
- 	<!-- AngularUI Bootstrap -->
+	
+	<!-- AngularUI Bootstrap -->
  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
 	
     <!-- Application Files -->
@@ -42,5 +43,7 @@
 	<script src="/scripts/services/room.js"></script>
 	<script src="/scripts/controllers/HomeCtrl.js"></script>
 	<script src="/scripts/controllers/RoomCtrl.js"></script>
+	<script src="/scripts/controllers/ModalCtrl.js"></script>
+	<script src="/scripts/controllers/ModalCancelCtrl.js"></script>
 </body>
 </html>

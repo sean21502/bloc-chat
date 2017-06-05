@@ -7,11 +7,10 @@
     	Room.all = rooms;
 		
 		Room.add = function(room) {
-			$scope.data.child('Rooms').$add({
-    			name: name
-  			});
-    }
-
+			rooms.$add(room).then(function(ref) {
+				
+   			});
+		}
     	return Room;
   	}
 	angular

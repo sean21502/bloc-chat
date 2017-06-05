@@ -1,10 +1,18 @@
 <body class='home'>
+	<div class='container'>
 		<section>
 		<h1>{{ home.mainTitle }}</h1>
 	</section>
- 
+	
 	<section class='room'>
 		<h4 ng-repeat= 'room in home.rooms'>{{room.$value}}</h4>
 	</section>
+	
+	<section class='modals'>
+		<div ng-controller='ModalCtrl as modals'>
+        	<button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
+    	</div>
+	</section>
+	</div>
 </body>
 

@@ -2,7 +2,7 @@
 	function HomeCtrl(Room) {
 		this.mainTitle = "Bloc Chat";
 		this.rooms = Room.all;
-		
+	
     }
 
 	
