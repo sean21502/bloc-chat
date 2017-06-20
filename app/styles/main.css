@@ -1,11 +1,9 @@
-body {
-	background-color: lightblue;
+.span4 {
+	border-right: solid;
 }
 
-.container {
-	width: 25%;
-	height: 100%;
-	position: absolute;
-	color: black;
-	background-color: lightgray;
+.date {
+	font-size: 10px;
+	text-align: right;
+	
 }

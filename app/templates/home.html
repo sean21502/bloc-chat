@@ -1,18 +1,33 @@
-<body class='home'>
-	<div class='container'>
-		<section>
-		<h1>{{ home.mainTitle }}</h1>
-	</section>
+<body class='home'>	
+	<div class="container"></div>
+	<div>
+		<div class="row">
+			<div class="span4">
+				<section>
+					<h1>{{ home.mainTitle }}</h1>
+				</section>
 	
-	<section class='room'>
-		<h4 ng-repeat= 'room in home.rooms'>{{room.$value}}</h4>
-	</section>
-	
-	<section class='modals'>
-		<div ng-controller='ModalCtrl as modals'>
-        	<button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
-    	</div>
-	</section>
+				<section class='room'>
+					<ol>
+						<li ng-repeat= 'room in home.rooms'>
+							<a ng-click="home.changeRooms(room)">{{ room.$value }}</a>
+						</li>
+					</ol>
+				</section>
+				<section class='modals'>
+					<div ng-controller='ModalCtrl as modals'>
+        			  <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
+    				</div>
+				</section>
+			</div>
+			<div class="span8">
+				<section>
+					<h3 class="Room"> {{ currentRoom.$value }}</h3>
+					<p class="username" ng-repeat= 'message in currentMessages'>{{ message.username }}</p>
+                 	<p ng-repeat= 'message in currentMessages'>{{ message.content }}</p>
+					<p class="date" ng-repeat= 'message in currentMessages'>{{ message.sentAt }}</p>
+				</section>
+			</div>
+		</div>
 	</div>
 </body>
-
