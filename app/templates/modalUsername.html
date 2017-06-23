@@ -1,14 +1,14 @@
 <div>
     <div class="modal-header">
-        <h2 class="modal-title">Yo. Who are you?</h2>
+        <h2 class="modal-title">Set a Username</h2>
     </div>
     <div class="modal-body">
-        <p>Enter User Name Here.</p>
+        <p>This name will appear when you send messages.</p>
 		<form name="add-quote" ng-submit="modalInstance.ok()">
-            <input class="form-control" ng-model="modalInstance.room" title="room" placeholder="Enter name here!" autofocus />
+            <input class="form-control" ng-model="modalInstance.currentUser" title="username" placeholder="Enter name here!" autofocus />
         </form>
     </div>
     <div class="modal-footer">
-		<button class="btn btn-primary" type="button" ng-click="modalInstance.ok()">Add Name</button>
+		<button class="btn btn-primary" type="button" ng-click="modalInstance.ok">Set Username</button>
     </div>
 </div>
