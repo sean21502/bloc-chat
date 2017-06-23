@@ -1,7 +1,7 @@
 (function() {
     function ModalUserInstanceCtrl($uibModalInstance) {
         this.ok = function() {
-            $uibModalInstance.close(this.newUser)
+            $uibModalInstance.close(this.currentUser)
 		}
 	}
     angular
