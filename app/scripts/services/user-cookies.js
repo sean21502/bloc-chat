@@ -7,14 +7,12 @@
 					templateUrl: '/templates/modalUsername.html',
             		controller: 'ModalUserInstanceCtrl as modalUserInstance'
 				});
-		 
-		  /*var newUser = function(currentUser){
-			  $cookies.put(blocChatCurrentUser, currentUser);
-			  $window.alert("Welcome "+ currentUser);*/
 				
-				BlocChatCookies.result.this(function($cookies) {
-				  	$cookies.get('blocChatCurrentUser');
+				modalUser.result.then(function(username) {
+				  	$cookies.put('blocChatCurrentUser', username);
     			});
+				
+				
 			}
 	}
 	
@@ -22,3 +20,5 @@
     .module('blocChat')
     .run(['$cookies', '$uibModal', BlocChatCookies]);
 })();
+
+

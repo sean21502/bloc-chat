@@ -1,7 +1,9 @@
 (function() {
     function ModalUserInstanceCtrl($uibModalInstance) {
         this.ok = function() {
-            $uibModalInstance.close(this.currentUser)
+            if(this.currentUser !== "" && this.currentUser !== undefined){
+			   $uibModalInstance.close(this.currentUser);
+			}
 		}
 	}
     angular

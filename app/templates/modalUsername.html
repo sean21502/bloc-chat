@@ -4,11 +4,11 @@
     </div>
     <div class="modal-body">
         <p>This name will appear when you send messages.</p>
-		<form name="add-quote" ng-submit="modalInstance.ok()">
-            <input class="form-control" ng-model="modalInstance.currentUser" title="username" placeholder="Enter name here!" autofocus />
+		<form name="add-quote" ng-submit="modalUserInstance.ok()">
+            <input class="form-control" ng-model="modalUserInstance.currentUser" title="username" placeholder="Enter name here!" autofocus />
         </form>
     </div>
     <div class="modal-footer">
-		<button class="btn btn-primary" type="button" ng-click="modalInstance.ok">Set Username</button>
+		<button class="btn btn-primary" type="button" ng-click="modalUserInstance.ok()">Set Username</button>
     </div>
 </div>
