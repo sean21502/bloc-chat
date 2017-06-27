@@ -27,6 +27,12 @@
                  	<p ng-repeat= 'message in currentMessages'>{{ message.content }}</p>
 					<p class="date" ng-repeat= 'message in currentMessages'>{{ message.sentAt }}</p>
 				</section>
+				<section>
+					<form name="add-Message" ng-submit="home.send">
+            			<input class="form-control" ng-model="home.send" title="send" placeholder="Enter message here" autofocus />
+						<button class="btn btn-primary" type="button" ng-click="home.send">Send</button>
+        			</form>
+				</section>
 			</div>
 		</div>
 	</div>
