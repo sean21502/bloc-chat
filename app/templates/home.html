@@ -21,19 +21,36 @@
 				</section>
 			</div>
 			<div class="span8">
+				<table>
+					<tr>
+						<td class="Room"> {{ currentRoom.$value }}</td>
+					</tr>
+					<tr class="Room" ng-repeat='message in currentMessages'>
+						<td class="username" >{{ message.username }}</td>
+                 		<td class='content'>{{ message.content }}</td>
+						<td class="date">{{ message.sentAt }}</td>
+					</tr>
+				</table>
 				<section>
-					<h3 class="Room"> {{ currentRoom.$value }}</h3>
-					<p class="username" ng-repeat= 'message in currentMessages'>{{ message.username }}</p>
-                 	<p ng-repeat= 'message in currentMessages'>{{ message.content }}</p>
-					<p class="date" ng-repeat= 'message in currentMessages'>{{ message.sentAt }}</p>
-				</section>
-				<section>
-					<form name="add-Message" ng-submit="home.send">
-            			<input class="form-control" ng-model="home.send" title="send" placeholder="Enter message here" autofocus />
-						<button class="btn btn-primary" type="button" ng-click="home.send">Send</button>
+					<form name="add-Message" ng-submit="home.send(home.content, currentRoom.$id)">
+            			<input class="form-control" ng-model="home.content" title="send" placeholder="Enter message here" autofocus />
+						<button class="btn btn-primary" type="button" ng-click="home.send(home.content, currentRoom.$id)">Send</button>
         			</form>
 				</section>
 			</div>
 		</div>
 	</div>
 </body>
+
+
+<table class="album-view-song-list">
+         <tr class="album-view-song-item" ng-mouseover="hovered = true" ng-mouseleave="hovered = false" ng-repeat="song in album.albumData.songs">
+             <td class="song-item-number">
+				<span ng-show="!hovered && !song.playing">{{ $index + 1 }}</span>
+    			<a class="album-song-button" ng-show="hovered && !song.playing" ng-click="album.songPlayer.play(song)"><span class="ion-play"></span></a>
+    			<a class="album-song-button" ng-show="song.playing" ng-click="album.songPlayer.pause(song)"><span class="ion-pause"></span></a>
+			 </td>
+             <td class="song-item-title">{{ song.title }}</td>
+             <td class="song-item-duration">{{ song.duration | timecode }}</td>
+         </tr>
+     </table>

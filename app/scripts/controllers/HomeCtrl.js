@@ -2,7 +2,7 @@
 	function HomeCtrl(Room, Message, $scope) {
 		this.mainTitle = "Bloc Chat";
 		this.rooms = Room.all;
-		this.send = Message.add;
+		this.send = Message.send;
 		
 		
 		var changeRooms = function(room) {
